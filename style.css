@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -2px;
+}
+.card-summary{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 6px 6px 17px 0px hsl(241deg 100% 91.59%);
+    gap: 20px;
+    padding: 40px;
+}
+/* reaction */
+.Reaction{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: hsl(0, 100%, 97%);
+}
+.Reaction .picture {
+    color: hsl(0, 100%, 67%);
+    display: flex;
+    align-items: center;
+}
+.Reaction .picture  img{
+    margin-right:8px ;
+}
+span{
+    font-weight: 500;
+}
+/* memory */
+
+.Memory{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: hsl(39, 100%, 95%)
+}
+.Memory .picture {
+    color:  hsl(39, 100%, 56%);
+    display: flex;
+    align-items: center;
+}
+.Memory .picture  img{
+    margin-right:8px ;
+}
+/* verbal */
+.Verbal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    background-color:  hsl(166, 100%, 95%)
+}
+.Verbal .picture {
+    color:  hsl(166, 100%, 37%);
+    display: flex;
+    align-items: center;
+}
+.Verbal .picture  img{
+    margin-right:8px ;
+}
+/* visual */
+.Visual{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: hsl(234, 85%, 95%)
+}
+.Visual .picture {
+    color:  hsl(234, 85%, 45%);
+    display: flex;
+    align-items: center;
+}
+.Visual .picture  img{
+    margin-right:8px ;
+}
+button{
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background-color:hsla(256, 72%, 46%, 1);
+}
+/* card result */
+.card-result{
+    background: linear-gradient(355deg,  hsl(241, 81%, 54%), rgba(142,85,201,1) 100%);
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    position: absolute;
+    left: 18%;
+}
+.card-result h3{
+    color: hsl(241, 100%, 89%);
+}
+.card-result .result{
+    background: linear-gradient(360deg, hsla(241, 72%, 46%, 0) 10%, hsl(241, 81%, 54%) 100%);
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+
+}
+.card-result .result h1{
+    color: white;
+    font-size: 40px;
+}
+.card-result .result p{
+    color: hsl(241, 100%, 89%);
+}
+.card-result .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.card-result .description h2{
+    color: white;
+}
+.card-result .description p{
+    color: hsl(241, 100%, 89%);
+    text-align: center;
+}
+/* media quiry */
+@media only screen and (max-width:375px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-result{
+        position: absolute;
+        height: 45%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .card-summary{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
